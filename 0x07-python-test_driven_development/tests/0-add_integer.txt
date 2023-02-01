@@ -1,6 +1,7 @@
 # 0-add_integer.txt
 
 
+
 ===========================
 
 How to Use 0-add_integer.py
@@ -8,7 +9,9 @@ How to Use 0-add_integer.py
 ===========================
 
 
+
 This module defines an integer addition function ``add_integer(a, b=98)``.
+
 
 
 Usage
@@ -16,12 +19,15 @@ Usage
 =====
 
 
+
 ``add_integer(...)``` returns the addition of its two arguments. For numbers,
 
 that value is equivalent to using the ``+`` operator.
 
 
+
 ::
+
 
 
     >>> add_integer = __import__('0-add_integer').add_integer
@@ -31,7 +37,9 @@ that value is equivalent to using the ``+`` operator.
     5
 
 
+
 ::
+
 
 
     >>> add_integer(2, -3)
@@ -43,7 +51,9 @@ that value is equivalent to using the ``+`` operator.
 The function also works with floating-point values.
 
 
+
 ::
+
 
 
     >>> add_integer(2.0, 3.0)
@@ -55,7 +65,9 @@ The function also works with floating-point values.
 Note that floats are casted to ints before addition is performed.
 
 
+
 ::
+
 
 
     >>> add_integer(2.9, 0.2)
@@ -63,7 +75,9 @@ Note that floats are casted to ints before addition is performed.
     2
 
 
+
 ::
+
 
 
     >>> add_integer(-2.9, -0.2)
@@ -71,10 +85,13 @@ Note that floats are casted to ints before addition is performed.
     -2
 
 
+
 Floating and non-floating point values can be combined.
 
 
+
 ::
+
 
 
     >>> add_integer(2.3, -3)
@@ -86,7 +103,9 @@ Floating and non-floating point values can be combined.
 The second argument is optional - by default, it is 98.
 
 
+
 ::
+
 
 
     >>> add_integer(2)
@@ -94,9 +113,11 @@ The second argument is optional - by default, it is 98.
     100
 
 
+
 Non-Numbers
 
 ===========
+
 
 
 ``add_integer()`` expects that both arguments are either integers or floats.
@@ -104,7 +125,9 @@ Non-Numbers
 If either argument is a non-integer and non-float, a TypeError is raised:
 
 
+
 ::
+
 
 
     >>> add_integer("hello", 3)
@@ -114,7 +137,9 @@ If either argument is a non-integer and non-float, a TypeError is raised:
     TypeError: a must be an integer
 
 
+
 ::
+
 
 
     >>> add_integer(2, "hello")
@@ -154,7 +179,9 @@ If both arguments are non-integers and non-floats, a TypeError message is only
 printed for the first argument.
 
 
+
 ::
+
 
 
     >>> add_integer("hello", "there")
@@ -164,10 +191,14 @@ printed for the first argument.
     TypeError: a must be an integer
 
 
+
 The function will fail if infinity is provided.
 
 
+
 ::
+
+
 
     >>> add_integer(float('inf'))
 
@@ -177,7 +208,10 @@ The function will fail if infinity is provided.
 
      
 
+
+
 ::
+
 
 
     >>> add_integer(2, float('inf'))
@@ -187,10 +221,13 @@ The function will fail if infinity is provided.
     OverflowError: cannot convert float infinity to integer
 
 
+
 And again with NaN numbers.
 
 
+
 ::
+
 
 
     >>> add_integer(float('nan'))
@@ -200,7 +237,9 @@ And again with NaN numbers.
     ValueError: cannot convert float NaN to integer
 
 
+
 ::
+
 
 
     >>> add_integer(2, float('nan'))
@@ -208,3 +247,5 @@ And again with NaN numbers.
     Traceback (most recent call last):
 
     ValueError: cannot convert float NaN to integer
+
+

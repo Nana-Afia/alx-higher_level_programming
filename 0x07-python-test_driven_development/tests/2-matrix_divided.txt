@@ -7,7 +7,9 @@ How to Use 2-matrix_divided.py
 ==============================
 
 
+
 This module defines a matrix division function ``matrix_divided(matrix, div)``.
+
 
 
 Usage
@@ -21,7 +23,9 @@ Usage
 ``matrix`` with all elements divided by ``div``.
 
 
+
 ::
+
 
 
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
@@ -35,13 +39,17 @@ Usage
     ... ]
 
     >>> print(matrix_divided(matrix, 3))
+
     [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
 
 
 Note that quotients are rounded to a maximum of two decimal places.
 
 
+
 ::
+
 
 
     >>> matrix = [
@@ -51,24 +59,33 @@ Note that quotients are rounded to a maximum of two decimal places.
     ...     [4, 5, 6]
 
     ... ]
+
     >>> print(matrix_divided(matrix, 3))
+
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
 
 
 The original matrix is left unchanged.
 
 
+
 ::
 
 
+
     >>> print(matrix)
+
     [[1, 2, 3], [4, 5, 6]]
+
 
 
 The function can also handle floating-point numbers.
 
 
+
 ::
+
 
 
     >>> matrix = [
@@ -88,7 +105,9 @@ The function can also handle floating-point numbers.
 Integers and floats can be combined.
 
 
+
 ::
+
 
 
     >>> matrix = [
@@ -96,8 +115,11 @@ Integers and floats can be combined.
     ...     [1, -2.2, 3, 4.4, 5],
 
     ...     [-6.6, 7.00, 8, 9.999, 10]
+
     ... ]
+
     >>> print(matrix_divided(matrix, 3))
+
     [[0.33, -0.73, 1.0, 1.47, 1.67], [-2.2, 2.33, 2.67, 3.33, 3.33]]
 
 
@@ -107,7 +129,9 @@ Invalid Matrices
 ==============
 
 
+
 The parameter ``matrix`` must be a list of lists consisting of either ints or
+
 floats. If ``matrix`` is not a list, a TypeError is raised.
 
 
@@ -115,9 +139,13 @@ floats. If ``matrix`` is not a list, a TypeError is raised.
 ::
 
 
+
     >>> matrix = "not a list"
+
     >>> print(matrix_divided(matrix, 3))
+
     Traceback (most recent call last):
+
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 
@@ -125,9 +153,13 @@ floats. If ``matrix`` is not a list, a TypeError is raised.
 ::
 
 
+
     >>> matrix = None
+
     >>> print(matrix_divided(matrix, 3))
+
     Traceback (most recent call last):
+
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 
@@ -139,9 +171,13 @@ Note that an empty list will raise the TypeError.
 ::
 
 
+
     >>> matrix = []
+
     >>> print(matrix_divided(matrix, 3))
+
     Traceback (most recent call last):
+
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 
@@ -149,34 +185,47 @@ Note that an empty list will raise the TypeError.
 But an empty list of lists will succeed.
 
 
+
 ::
 
 
+
     >>> matrix = [[]]
+
     >>> print(matrix_divided(matrix, 3))
 
     [[]]
 
 
+
 An identical TypeError is raised if ``matrix`` is not specifically a list of
+
 lists.
+
 
 
 ::
 
 
+
     >>> matrix = [1, 2, 3]
+
     >>> print(matrix_divided(matrix, 3))
+
     Traceback (most recent call last):
+
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 
 
 The same TypeError is raised yet again if any elements in ``matrix`` are
+
 neither ints nor floats.
 
 
+
 ::
+
 
 
     >>> matrix = [
@@ -192,6 +241,8 @@ neither ints nor floats.
     Traceback (most recent call last):
 
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
 
 
 
@@ -214,7 +265,9 @@ of different sizes, a new TypeError is raised.
     ... ]
 
     >>> print(matrix_divided(matrix, 3))
+
     Traceback (most recent call last):
+
     TypeError: Each row of the matrix must have the same size
 
 
@@ -222,6 +275,7 @@ of different sizes, a new TypeError is raised.
 Invalid Divisors
 
 ================
+
 
 
 The parameter ``div`` must be either an int or float. Otherwise, a TypeError
@@ -233,6 +287,7 @@ is raised.
 ::
 
 
+
     >>> matrix = [
 
     ...     [1, 2, 3],
@@ -242,15 +297,21 @@ is raised.
     ... ]
 
     >>> print(matrix_divided(matrix, "not a number"))
+
     Traceback (most recent call last):
+
     TypeError: div must be a number
+
 
 
 ::
 
 
+
     >>> print(matrix_divided(matrix, None))
+
     Traceback (most recent call last):
+
     TypeError: div must be a number
 
 
@@ -262,6 +323,9 @@ is raised.
 ::
 
 
+
     >>> print(matrix_divided(matrix, 0))
+
     Traceback (most recent call last):
+
     ZeroDivisionError: division by zero

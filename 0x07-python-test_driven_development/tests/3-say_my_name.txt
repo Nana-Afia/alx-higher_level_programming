@@ -85,7 +85,9 @@ a TypeError is raised.
     TypeError: first_name must be a string
 
 
+
 ::
+
 
 
     >>> say_my_name("LeBron", ["Cavs", "Lakers", "Heat"])
@@ -95,7 +97,9 @@ a TypeError is raised.
     TypeError: last_name must be a string
 
 
+
 ::
+
 
 
     >>> say_my_name({"LeBron": 6, "James": 23}, 7.7)
@@ -105,7 +109,9 @@ a TypeError is raised.
     TypeError: first_name must be a string
 
 
+
 ::
+
 
 
     >>> say_my_name(None)
@@ -115,10 +121,13 @@ a TypeError is raised.
     TypeError: first_name must be a string
 
 
+
 At least one name must be provided.
 
 
+
 ::
+
 
 
     >>> say_my_name()
