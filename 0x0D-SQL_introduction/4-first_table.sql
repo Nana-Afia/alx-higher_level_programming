@@ -1,2 +1,2 @@
 -- creating a table in the current database
-CREATE TABLE first_table IN hbtn_0c_0 (id INT), (name VARCHAR(256));
+CREATE TABLE IF NOT EXISTS (id INT, name VARCHAR(256));
